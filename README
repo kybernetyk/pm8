@@ -28,6 +28,8 @@ Build:
     run ./build_linux_gcc.sh
  
 Run:
+	On success the compile script puts the binary into ./build/
+
   On OS X make sure to quit the official Griffin Power Mate app first as
   HIDAPI access seems to be blocked by it.
 
