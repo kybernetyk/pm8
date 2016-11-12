@@ -6,6 +6,8 @@ effects with Philips Hue).
 
 Works on OS X and Linux (tested on Ubuntu and Raspbian)
 
+NOTE: There's also a Swift 3 version of this code:
+https://github.com/kybernetyk/SwiftHIDAPI
 
 Dependencies:
 	- clang (or gcc) in some newer incarnation (requires C++11 support)
