@@ -139,13 +139,12 @@ void dispatch_event(PowerMateEvent ev) {
     
     if (ev == PowerMateEvent::ButtonDown) {
         cur_bri = 255;
+			std::system("say fuck you &");
     }
     
     if (ev == PowerMateEvent::ButtonUp) {
         cur_bri = 0;
     }
-    
-    //	 let val = min(max(0, brightness), 255)
     
     cur_bri = std::min(std::max(0, cur_bri), 255);
     if (cur_bri == prev_bri) {
