@@ -1,0 +1,44 @@
+pm8
+
+Little toy program to directly access the Griffin Power Mate via USB. Their
+provided OS X app is fine but doesn't do what I want it to do (mad light
+effects with Philips Hue).
+
+Works on OS X and Linux (tested on Ubuntu and Raspbian)
+
+
+Dependencies:
+	- clang (or gcc) in some newer incarnation (requires C++11 support)
+	- hidapi ( https://github.com/signal11/hidapi )
+
+
+Build:
+	First download, build and install hidapi from https://github.com/signal11/hidapi
+  You don't really need to build it yourself nowadays as both Homebrew and
+  Ubuntu/Debian repository versions seem to work just fine nowadays.
+
+  Then run the appropriate build script for your OS/compiler combination:
+
+  OS X:
+    run ./build_osx.sh
+  Linux (clang, raspberry pi):
+    run ./build_linux.sh 
+    yes, this code should work & compile on the rpi, too. 
+  Linux (gcc because gcc requires special treatment):
+    run ./build_linux_gcc.sh
+ 
+Run:
+  On OS X make sure to quit the official Griffin Power Mate app first as
+  HIDAPI access seems to be blocked by it.
+
+  On Linux you need to run this code with super user privileges. (sudo)
+  I would suggest you add a udev rule though because you're running my shitty
+  code as root ;)
+  How to add udev rules can be found in the HIDAPI docs. They got a pretty
+  nice example so even I was able to get it done.
+
+Copyright & License:
+	This code is licensed under the Affero GPL3 License!
+	(c) Jarosław Leon Szpilewski
+
+
