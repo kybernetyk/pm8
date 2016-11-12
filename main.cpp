@@ -190,7 +190,7 @@ int main(int argc, char **argv) {
 	dump_features(handle);
 
 	//make the dvice nonblocking.
-	hid_set_nonblocking(handle, 1);
+//	hid_set_nonblocking(handle, 1);
 
 	unsigned char buf[65];
 	for (;;) {
